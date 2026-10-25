@@ -38,6 +38,23 @@ The most frequent extracted values included:
 
 These counts describe activity in the dataset and do not, by themselves, establish malicious behaviour.
 
+## Analysis and Interpretation
+
+The analysis identified variations in DNS query frequency and source IP activity within the dataset. The source IP `10.10.117.210` recorded 75,943 events, making it a key candidate for further review.
+
+However, a high number of DNS events does not automatically indicate malicious activity. The results should be interpreted in the context of normal network behaviour, the queried domain values and the distribution of events over time.
+
+The current findings provide an initial overview of DNS activity rather than confirmation of a security incident.
+
+## Recommended Follow-up Investigation
+
+The following steps would help validate and expand the analysis:
+
+1. **Validate extracted fields:** Compare the extracted source IP addresses and DNS query values against the original raw log entries.
+2. **Review traffic patterns:** Examine the timeline for unusual increases in DNS activity.
+3. **Investigate high-volume sources:** Review the DNS query values associated with source IPs generating large numbers of events.
+4. **Correlate additional evidence:** Where available, examine DNS response codes and related network logs to determine whether further investigation is warranted.
+
 ## Limitations
 - Some fields were extracted using regular expressions and require further validation against the original log format.
 - Unique query values may include malformed or non-domain values.
