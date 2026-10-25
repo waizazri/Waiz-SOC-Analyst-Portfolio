@@ -56,5 +56,31 @@ These counts describe activity in the dataset and do not, by themselves, establi
 - Time-series visualisation
 - Evidence-based reporting
 
+## Screenshots
+
+### 1. Data Ingestion
+![DNS data ingestion](screenshots/01-data-ingestion.png)
+
+### 2. Raw DNS Events
+![Raw DNS events](screenshots/02-raw-dns-events.png)
+
+### 3. DNS Field Extraction
+![DNS field extraction](screenshots/03-dns-field-extraction.png)
+
+### 4. Top DNS Query Values
+![Top DNS queries](screenshots/04-dns-query-analysis.png)
+
+### 5. DNS Traffic Timeline
+![DNS traffic timeline](screenshots/05-dns-traffic-timeline.png)
+
+### 6. Top DNS Source IPs
+![Top DNS source IPs](screenshots/06-top-dns-source-ips.png)
+
+### 7. DNS Queries by Source IP
+![DNS queries by source IP](screenshots/07-top-dns-queries-by-source-ip.png)
+
+### 8. Source IP Summary
+![Source IP summary](screenshots/08-dns-source-ip-summary.png)
+
 ## Disclaimer
 This project uses a public historical dataset for educational purposes. Findings should not be interpreted as proof of a live security incident.
