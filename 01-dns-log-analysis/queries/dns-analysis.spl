@@ -1,0 +1,27 @@
+# 1. Top DNS query values
+index=main host=dns-lab source="dns.log.gz"
+| rex field=_raw "^\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+(?<dns_query>\S+)"
+| stats count by dns_query
+| sort - count
+| head 20
+
+# 2. DNS traffic timeline
+index=main host=dns-lab source="dns.log.gz"
+| rex field=_raw "^(?<epoch>\d{10}\.\d+)"
+| eval event_time=tonumber(epoch)
+| eval _time=event_time
+| timechart span=1h count
+
+# 3. Top source IPs
+index=main host=dns-lab source="dns.log.gz"
+| rex field=_raw "^\S+\s+\S+\s+(?<src_ip>\S+)"
+| stats count by src_ip
+| sort - count
+| head 10
+
+# 4. Summary for selected source IP
+index=main host=dns-lab source="dns.log.gz"
+| rex field=_raw "^\S+\s+\S+\s+(?<src_ip>\S+)"
+| rex field=_raw "^\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+\S+\s+(?<dns_query>\S+)"
+| search src_ip="10.10.117.210"
+| stats dc(dns_query) as unique_dns_queries count as total_events
