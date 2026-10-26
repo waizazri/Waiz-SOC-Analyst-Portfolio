@@ -94,12 +94,17 @@ These are mappings from the reference scenario, not independently confirmed tech
 
 ## Evidence
 
-Screenshots of the four Splunk hunt results are stored in the `screenshots/` directory.
+### 1. Internal Host
+![Internal Host](screenshots/01-internal-host.png)
 
-- `01-internal-host.png`
-- `02-unique-fqdns.png`
-- `03-mining-endpoints.png`
-- `04-host-mac.png`
+### 2. Unique Coinhive FQDNs
+![Unique FQDNs](screenshots/02-unique-fqdns.png)
+
+### 3. Mining Endpoints
+![Mining Endpoints](screenshots/03-mining-endpoints.png)
+
+### 4. Host MAC Address
+![Host MAC Address](screenshots/04-host-mac.png)
 
 ## Reference
 
