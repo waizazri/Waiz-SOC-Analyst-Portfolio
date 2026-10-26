@@ -109,7 +109,6 @@ These are reference-scenario mappings, not techniques independently proven by th
 ### 4. Source MAC Address
 ![Host MAC Address](screenshots/04-host-mac.png)
 
-> Note: rerun Query 3 and replace its screenshot so the evidence shows the corrected SPL query.
 
 ## Reference
 
